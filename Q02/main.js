@@ -7,8 +7,19 @@ Have the function LongestWord(sen) take the sen parameter being passed and retur
 */
 
 function LongestWord_2(sen) {
-  // YOUR CODE HERE
+  if(sen.length === 0){
+    return "Zero Words"
+  }
+  let output = ""
+  let words = sen.replace(/[^a-z]+/gi, ' ').split(' ');
 
+  words.forEach(word => {
+    if(word.length > output.length){
+      output = word
+    }   
+  });
+
+  return output
 }
 
 /* 
