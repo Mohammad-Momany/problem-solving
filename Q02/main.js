@@ -18,7 +18,6 @@ function LongestWord_2(sen) {
       output = word
     }   
   });
-
   return output
 }
 
