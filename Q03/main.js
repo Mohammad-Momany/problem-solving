@@ -7,7 +7,8 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 */
 
 function FirstReverse(str) {
-  // YOUR CODE HERE
+  const split = str.split("").reverse().join("")
+  return split
 }
 
 /* 
