@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 6');
+console.log("Problem Solving Q: 6");
 
 /* Even or Not */
 
@@ -7,12 +7,11 @@ Write a function that returns true if a number is even, and false otherwise.
 */
 
 function evenOrNot(num) {
-  
-  if( num % 2 === 0 ){
-    return true
-  }else{
-    return false}
-  
+  if (num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
