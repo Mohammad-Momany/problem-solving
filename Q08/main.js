@@ -6,10 +6,14 @@ console.log("Problem Solving Q: 8");
 Write a function that returns the number of unique items in an array.
 */
 
-function uniqueItems(array) {
-
-  const reducer = (a, c) => a + c
-  return array.reduce(reducer);
+function uniqueItems(nums) {
+  let uniqueItemLength = [];
+  nums.forEach((num) => {
+    if (!uniqueItemLength.includes(num)) {
+      uniqueItemLength.push(num);
+    }
+  });
+  return uniqueItemLength.length;
 }
 
 /* 
@@ -22,7 +26,3 @@ uniqueItems([1, 2, 3, 1, 2, 3]) // => 3
 uniqueItems([5, 1, 2, 2, 1, 5]) // => 3
 uniqueItems([5, 77, 1, 3]) // => 4
 */
-
-// array1.filter((num) => {
-//   reducer = ;
-// });
