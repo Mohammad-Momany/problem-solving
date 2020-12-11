@@ -19,10 +19,9 @@ function firstNonRepeatedCharacter(str) {
     }
     i--;
   }
-
   return char;
 }
 
-// Examples: firstNonRepeatedCharacter("ABCDBIRDUP"); // => 'A'
-// // firstNonRepeatedCharacter("ALABAMA"); // => 'L'
-// // firstNonRepeatedCharacter("Uber for horses"); // => 'U'
+// Examples: firstNonRepeatedCharacter("AABCDBIRDUP"); // => 'A'
+// firstNonRepeatedCharacter("ALABAMA"); // => 'L'
+// firstNonRepeatedCharacter("Uber for horses"); // => 'U'
