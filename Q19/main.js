@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 19');
+console.log("Problem Solving Q: 19");
 
 /* Is Subset Of */
 
@@ -8,11 +8,17 @@ To simplify the problem, you can assume that both arrays will contain only strin
 */
 
 Array.prototype.isSubsetOf = function (array) {
- 
-}
+    let result = true
+  this.forEach((arr) => {
+    if (!array.includes(arr)) {
+        result = false;
+    }
+  });
+  return result;
+};
 
 
 Examples:
-[].isSubsetOf([1, 2, 2]) // => true
-['cat', 'dog', 'cow'].isSubsetOf(['dog', 'cow', 'fox', 'cat']) // => true
-['cat', 'dog', 'cow'].isSubsetOf(['dog', 'cow', 'fox']) // => false
+ [].isSubsetOf([1, 2, 2]) // => true
+  ["cat", "dog", "cow"].isSubsetOf(["dog", "cow", "fox", "cat"]) // => true
+  ["cat", "dog", "cow"].isSubsetOf(["dog", "cow", "fox"]); // => false
