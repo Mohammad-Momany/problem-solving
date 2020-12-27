@@ -12,6 +12,9 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+    // for loop
+    // check if the number equle 3 return fizz if 5 return buzz
+}
 
 module.exports = fizzBuzz;
