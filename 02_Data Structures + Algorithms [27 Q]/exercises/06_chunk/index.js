@@ -9,9 +9,16 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
-    //for loop
-    //slice = size 
-    //slice the number put them in an array
+    let concat = []
+    array.forEach(num => {
+          if (concat.length > 0){
+            splice = num.splice(size)
+            concat.push(splice)
+        }else if(concat[0].toString() === num.slice(size).toString()){
+            slice = num.slice(size)
+            concat.push(slice)
+        }
+    });
 }
 
 module.exports = chunk;
