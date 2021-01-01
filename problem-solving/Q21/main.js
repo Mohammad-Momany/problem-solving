@@ -14,7 +14,7 @@ function onlyUnique(str) {
     if (obj[char]) {
       obj[char] += 1;
     } else {
-      obj[char] = 1;
+      obj[char] = 1;  
     }
   });
   const entries = Object.entries(obj);
@@ -27,8 +27,8 @@ function onlyUnique(str) {
 }
 
 /* 
-onlyUnique('hello there') // => 'o tr'
 Examples:
+onlyUnique('hello there') // => 'o tr'
 onlyUnique('xyz') // => 'xyz'
 onlyUnique('iiii') // => ''
 */
