@@ -18,7 +18,6 @@ function commonCharacters(first, second) {
       if (!arr.includes(char)) arr.push(char);
     }
   });
-  console.log(arr.join(""));
   return arr.join("");
 }
 

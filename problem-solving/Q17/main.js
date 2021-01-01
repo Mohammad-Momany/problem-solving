@@ -9,7 +9,7 @@ Given an arbitrary input string, return the first non-repeating character. For s
 function firstNonRepeatedCharacter(str) {
   str = str.split("");
   let char = str[0];
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i) {
     str.shift();
     if (str.includes(char)) {
       str.push(char);
@@ -17,7 +17,6 @@ function firstNonRepeatedCharacter(str) {
     } else {
       return char;
     }
-    i--;
   }
   return char;
 }
