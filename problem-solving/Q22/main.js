@@ -13,7 +13,7 @@ function characterFrequency(str) {
   let obj = {};
   str.forEach((char) => {
     obj[char] ? (obj[char] += 1) : (obj[char] = 1);
-  });
+  }); 
   let entries = Object.entries(obj);
  
     return entries.sort((num1, num2) => num2[1] - num1[1])

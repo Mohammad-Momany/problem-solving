@@ -16,7 +16,7 @@ function firstNonRepeatedCharacter(str) {
       char = str[i];
     } else {
       return char;
-    }
+    };
   }
   return char;
 }
