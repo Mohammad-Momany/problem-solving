@@ -1,4 +1,4 @@
-console.log('Problem Solving Q: 22');
+console.log("Problem Solving Q: 22");
 
 /* characterFrequency */
 
@@ -8,8 +8,16 @@ console.log('Problem Solving Q: 22');
  ascending order by character.
 */
 
-function characterFrequency() {
-  // YOUR CODE HERE...
+function characterFrequency(str) {
+  str = str.split("").sort();
+  let obj = {};
+  str.forEach((char) => {
+    obj[char] ? (obj[char] += 1) : (obj[char] = 1);
+  });
+  let entries = Object.entries(obj);
+ 
+    return entries.sort((num1, num2) => num2[1] - num1[1])
+  
 }
 
 /* 
