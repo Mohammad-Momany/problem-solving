@@ -14,7 +14,7 @@ return desired
 }
 
 /* 
-Examples:
+Examples:  
 parseQueryString("http://example.com?a=hello&b=99") // [ [ "a", "hello" ], [ "b", "99" ] ]
 parseQueryString("http://example.com?msg=hello%20world") // [ [ "msg", "hello world" ] ]
 parseQueryString("http://example.com") // undefined

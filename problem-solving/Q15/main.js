@@ -14,7 +14,7 @@ function commonCharacters(first, second) {
   let second1 = second.split(" ").join("").split("");
 
   first1.filter((char) => {
-    if (second1.includes(char)) {
+    if (second1.includes(char)) { 
       if (!arr.includes(char)) arr.push(char);
     }
   });

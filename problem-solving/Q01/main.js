@@ -13,7 +13,7 @@ function LongestWord(sen) {
   let output = ""
   const words = sen.split(" ")
 
-  words.forEach(word => {
+  words.forEach(word => { 
     if(word.length > output.length){
       output = word
     }   
