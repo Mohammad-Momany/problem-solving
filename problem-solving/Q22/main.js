@@ -19,7 +19,7 @@ function characterFrequency(str) {
     return entries.sort((num1, num2) => num2[1] - num1[1])
   
 }
-
+ 
 /* 
 Examples:
 characterFrequency('mississippi') // =>  [ ['i', 4],['s', 4],  ['p', 2],  ['m', 1]  ]
