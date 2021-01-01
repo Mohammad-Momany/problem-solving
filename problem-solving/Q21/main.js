@@ -11,19 +11,13 @@ function onlyUnique(str) {
   let obj = {};
   let unique = [];
   str.forEach((char) => {
-    if (obj[char]) {
-      obj[char] += 1;
-    } else {
-      obj[char] = 1;  
-    }
+    obj[char] ? (obj[char] += 1) : (obj[char] = 1);
   });
   const entries = Object.entries(obj);
   for (let i = 0; i < entries.length; i++) {
-    if (entries[i][1] === 1) {
-      unique.push(entries[i][0]);
-    }
+    entries[i][1] === 1 ? unique.push(entries[i][0]) : "";
   }
-  return unique.join("")
+  return unique.join("");
 }
 
 /* 
