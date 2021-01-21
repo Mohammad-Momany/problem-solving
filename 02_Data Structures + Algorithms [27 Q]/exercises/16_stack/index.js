@@ -21,7 +21,7 @@ class Stack {
 
   pop() {
     if (this.isEmpty()) {
-      return [];
+      return "Stack is empty";
     }
     return this.data.pop();
   }
