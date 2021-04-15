@@ -14,13 +14,14 @@ If the username is valid then your program should return the string true, otherw
 */
 
 function CodelandUsernameValidation(str) {
-  return (
-    str.length > 3 &&
-    str.length < 26 &&
-    str[0].toLowerCase() != str[0].toUpperCase() &&
-    !!/^(\w|\|-)+$/.test(str) &&
-    str[str.length - 1].match() !== "_"
-  );
+    str = str.toLowerCase()
+    return (
+        str.length > 3 &&
+        str.length < 26 &&
+        (str[0] >= 'a' && str[0] <= 'z') &&
+        (str >= 'a' && str <= 'z') || (str >= '0' && str <= '9') || str === '_' &&
+        str[str.length - 1] !== "_"
+    );
 }
 
 /*  
