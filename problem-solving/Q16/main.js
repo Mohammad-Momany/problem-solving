@@ -7,11 +7,11 @@ Find the first item that occurs an even number of times in an array.
 */
 
 function evenOccurrence(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] % 2 === 0 && arr[i] === arr[i + 1]) {
-      return arr[i];
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] % 2 === 0 && arr[i] === arr[i + 1]) {
+            return arr[i];
+        }
     }
-  }
 }
 
 // Examples: evenOccurrence([1, 2, 6, 6]); // => 6
