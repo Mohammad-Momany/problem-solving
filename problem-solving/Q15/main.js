@@ -8,19 +8,17 @@ Your function should return the common characters in the same order that they ap
 Do not return duplicate characters and ignore whitespace in your returned string.
 */
 
-function commonCharacters(first, second) {
-  let arr = [];
-  let first1 = first.split(" ").join("").split("");
-  let second1 = second.split(" ").join("").split("");
 
-  first1.filter((char) => {
-    if (second1.includes(char)) { 
-      if (!arr.includes(char)) arr.push(char);
-    }
-  });
-  return arr.join("");
+function commonCharacters(first, second) {
+    return [...second].reduce((commonChar, char) => {
+        if (first.includes(char) && !commonChar.includes(char) && (char >= 'a' && char <= 'z' || char >= 'A' && char <= 'Z')) {
+            console.log(char);
+            commonChar += char
+        }
+        return commonChar
+    }, '')
 }
 
-Examples: commonCharacters("abc", "abc"); // => 'abc'
-commonCharacters("What is love?", "Baby don't hurt me"); // => 'hatoe'
-commonCharacters("Riding on a buffalo makes me more approachable", "so what"); // => 'oash'
+// Examples: commonCharacters("abc", "abc"); // => 'abc'
+// commonCharacters("What is love?", "Baby don't hurt me"); // => 'hatoe'
+// commonCharacters("Riding on a buffalo makes me more approachable", "so what"); // => 'oash'
