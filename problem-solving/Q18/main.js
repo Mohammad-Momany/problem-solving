@@ -8,14 +8,13 @@ Given an integer, n, return n! (n factorial)
 */
 
 function factorial(n) {
-  let num = 1
-  for (let i = n; i >= 0; i--) {
-    num = i * num
-  }
-  return num
+    if (!n) {
+        return 1
+    }
+    return n * factorial(n - 1)
 }
 
- 
+
 // Examples:
 // factorial(1) // => 1
 // factorial(3) // => 6
