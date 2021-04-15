@@ -7,8 +7,12 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 */
 
 function FirstReverse(str) {
-  const split = str.split("").reverse().join("")
-  return split
+
+    let rev = ''
+    for (let char of str) {
+        rev = char + rev
+    }
+    return rev
 }
 
 /* 
@@ -17,4 +21,3 @@ FirstReverse('I Love Code'); // => 'edoC evoL I'
 FirstReverse('Hello World'); // => 'dlroW olleH'
 FirstReverse('How are you?'); // => '?uoy era woH'
 */
-
