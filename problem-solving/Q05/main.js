@@ -10,23 +10,28 @@ Have the function FindIntersection(strArr) read the array of strings stored in s
    If there is no intersection, return the string false.
 */
 
+
 function findIntersection(strArr) {
 
-  const num0 = [strArr[0]];
-  const num1 = [strArr[1]];
+    function cuteArr(part) {
+        return strArr[part].split(",")
+    }
+    const firstArr = cuteArr(0)
+    const secondArr = cuteArr(1)
+    let len;
 
-  const num00 = num0.join().replace(/,/g, "").split(" ");
+    firstArr.length > secondArr.length ? len = firstArr.length : len = secondArr.length
 
-  const num11 = num1.join().replace(/,/g, "").split(" ");
 
-  array = num00.filter( num => {
-    return num11.includes(num);
-  });
-   if(array.length > 0){
-    return array.join()
-  }else{
-    return "the string false"
-  }
+    let similarNumbers = []
+    for (let i = 0; i < len; i++) {
+        if (secondArr.includes(firstArr[i])) {
+            similarNumbers.push(firstArr[i])
+        }
+
+    }
+    return similarNumbers.join()
+
 }
 
 /* 
