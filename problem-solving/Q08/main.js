@@ -7,13 +7,17 @@ Write a function that returns the number of unique items in an array.
 */
 
 function uniqueItems(nums) {
-  let uniqueItemLength = [];
-  nums.forEach((num) => {
-    if (!uniqueItemLength.includes(num)) {
-      uniqueItemLength.push(num);
-    }
-  });
-  return uniqueItemLength.length;
+
+    // return new Set(nums).size
+
+    // OR
+
+    return nums.reduce((unique, num) => {
+        if (!unique.includes(num)) {
+            unique.push(num)
+        }
+        return unique
+    }, []).length
 }
 
 /* 
