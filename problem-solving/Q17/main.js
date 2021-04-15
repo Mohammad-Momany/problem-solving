@@ -6,21 +6,29 @@ console.log("Problem Solving Q:17 ");
 Given an arbitrary input string, return the first non-repeating character. For strings with all repeats, return 'sorry'
 */
 
-function firstNonRepeatedCharacter(str) {
-  str = str.split("");
-  let char = str[0];
-  for (let i = 0; i < str.length; i) {
-    str.shift();
-    if (str.includes(char)) {
-      str.push(char);
-      char = str[i];
-    } else {
-      return char;
-    }; 
-  }  
-  return char;
+console.log("Problem Solving Q:17 ");
+
+/*  
+Given an arbitrary input string, return the first non-repeating character. For strings with all repeats, return 'sorry'
+*/
+
+function findFirstNonIterativedCharacter(str) {
+
+    const chars = [...str].reduce((obj, char) => {
+        obj[char] = obj[char] + 1 || 1
+        return obj
+    }, {})
+
+    for (const char in chars) {
+        if (chars[char] === 1) {
+            return char
+        }
+    }
 }
 
-// Examples: firstNonRepeatedCharacter("AABCDBIRDUP"); // => 'A'
-// firstNonRepeatedCharacter("ALABAMA"); // => 'L'
-// firstNonRepeatedCharacter("Uber for horses"); // => 'U'
+/* 
+Examples:
+findFirstNonIterativedCharacter('ABCDBIRDUP') // => 'A'
+findFirstNonIterativedCharacter('ALABAMA') // => 'L'
+findFirstNonIterativedCharacter('Uber for horses') // => 'U'
+*/
