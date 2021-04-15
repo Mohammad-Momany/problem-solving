@@ -8,14 +8,14 @@ If the array has an even number of elements, return the average of the two middl
 */
 
 function ArrayMiddle(arr) {
-  const len = arr.length;
-  if (len % 2 === 0) {
-    let middle = len / 2;
-    let avg = (arr[middle] + arr[middle - 1]) / 2;
-    return avg;
-  }
-  let middleNum = Math.floor(len / 2);
-  return arr[middleNum];
+    const len = arr.length;
+    if (len % 2 === 0) {
+        const middle = len / 2;
+        const avg = (arr[middle] + arr[middle - 1]) / 2;
+        return avg;
+    }
+    let middleNum = Math.floor(len / 2);
+    return arr[middleNum];
 }
 
 /* 
