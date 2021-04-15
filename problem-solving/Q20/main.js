@@ -8,6 +8,7 @@ Write a function that accepts an array of integers and returns the largest produ
 
 function largestProductOfThree(arr) {
     arr = arr.sort((a, b) => b - a)
+    return arr[0] * arr[1] * arr[2]
 }
 
 /* 
