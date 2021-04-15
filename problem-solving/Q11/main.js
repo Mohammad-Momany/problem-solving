@@ -7,8 +7,7 @@ Write a function that returns YES if a number is a power of 2, and NO otherwise.
 */
 
 function isPowerOfTwo(num) {
-  let nums = (Math.log(num)/Math(2))%1
-  return nums;
+    return Math.log2(num) % 1 === 0
 }
 
 /* 
