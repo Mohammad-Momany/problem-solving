@@ -7,13 +7,13 @@ Write a function that returns the sum of odd numbers in an array.
 */
 
 function SumOddNumber(nums) {
-  const arr = [];
-  nums.filter((num) => {
-    if (num % 2 !== 0) {
-      newArr.push(num);
-    }
-  });
-  return arr.reduce((a, b) => a + b);
+
+    return nums.reduce((sum, num) => {
+        if (!(num % 2 === 0)) {
+            sum += num
+        }
+        return sum
+    }, 0)
 }
 
 /* 
