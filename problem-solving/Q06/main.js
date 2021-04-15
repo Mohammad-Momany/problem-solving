@@ -7,11 +7,7 @@ Write a function that returns true if a number is even, and false otherwise.
 */
 
 function evenOrNot(num) {
-  if (num % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+    return num % 2 === 0 ? true : false
 }
 
 /* 
