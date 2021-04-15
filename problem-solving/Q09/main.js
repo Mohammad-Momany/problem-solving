@@ -7,23 +7,28 @@ Write a function that returns the length of the longest sequence of 1s in an arr
 */
 
 function longestSequence(array) {
-  let longest = 0;
-  let count = 0;
-  array.forEach(num => {
-    if (num !== 1) {
-      if (count > longest) {
-        longest=count;
-      }
-      count = 0;
-    } else {
-      count += 1
+
+    let observeNums = 0
+    let longest = 0
+    for (let num of array) {
+
+        if (num === 1) {
+            observeNums++
+        } else if (observeNums > longest || !num) {
+            longest = observeNums
+            observeNums = 0
+        }
+
     }
-  });
-      if (longest < count) {
-        longest = count;
-      }
-  return longest;
+    if (!longest) {
+        return 'There is no one sequenced'
+    }
+    return observeNums > longest ? observeNums : longest
+
+
 }
+
+
 
 /* 
 Examples:
