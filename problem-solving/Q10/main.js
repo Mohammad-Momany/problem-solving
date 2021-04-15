@@ -7,24 +7,26 @@ Write a function that returns the number of occurrences of the most frequent cha
 */
 
 function timesOfMostFreqChar(str) {
-str = str.split("");
-let obj = {}
-str.forEach((char)=>{
-  if (obj[char]) {
-    obj[char] += 1
-  }else{
-    obj[char] = 1
-  }
-})
-let arr = Object.values(obj);
-let max = Math.max(...arr);
-return max
+
+    const chars = [...str].reduce((obj, char) => {
+        obj[char] = obj[char] + 1 || 1
+        return obj
+    }, {})
+
+    let maxChar = 0
+    for (const char in chars) {
+        if (chars[char] > maxChar) {
+            maxChar = chars[char]
+        }
+    }
+    return maxChar
+
 }
 
 /* 
 Examples:
-answer1('hello world') // => 3
-answer1('hello world lol') // => 5
-answer1('hello world lol woooow') // => 7
-answer1('hello world lol wow www.com') // => 6
+timesOfMostFreqChar('hello world') // => 3
+timesOfMostFreqChar('hello world lol') // => 5
+timesOfMostFreqChar('hello world lol woooow') // => 7
+timesOfMostFreqChar('hello world lol wow www.com') // => 6
 */
