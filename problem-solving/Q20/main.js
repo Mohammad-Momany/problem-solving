@@ -7,11 +7,7 @@ Write a function that accepts an array of integers and returns the largest produ
 */
 
 function largestProductOfThree(arr) {
-  let num = 1;
-  arr.forEach((n) => {
-    num = n * num;
-  });
-  return num
+    arr = arr.sort((a, b) => b - a)
 }
 
 /* 
